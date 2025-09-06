@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grace Akinsola - Career Transformation Speaker & Community Impact Leader</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #1a3a5c;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #1a3a5c 0%, #2c4a6b 50%, #2d3748 100%);
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="rgba(255,255,0,0.08)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+            opacity: 0.4;
+        }
+        
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+            z-index: 1;
+            position: relative;
+        }
+        
+        .hero-text h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            background: linear-gradient(45deg, #FFFF00, #FFFF44);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .hero-text .subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+            opacity: 0.95;
+            color: #FFFF00;
+        }
+        
+        .hero-text p {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #FFFF00 0%, #FFFF44 100%);
+            color: #1a3a5c;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(255, 255, 0, 0.3);
+            border: 2px solid #FFFF00;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(255, 255, 0, 0.4);
+            background: linear-gradient(135deg, #FFFF44 0%, #FFFF00 100%);
+        }
+        
+        .hero-image {
+            text-align: center;
+        }
+        
+        .speaker-photo {
+            width: 400px;
+            height: 600px;
+            border-radius: 10%;
+            object-fit: cover;
+            border: 3px solid #FFFF00;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+            transition: transform 0.3s ease;
+            background: linear-gradient(135deg, #2c4a6b 0%, #1a3a5c 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #FFFF00;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        
+        .speaker-photo:hover {
+            transform: scale(1.05);
+            box-shadow: 0 25px 70px rgba(255, 255, 0, 0.3);
+        }
+        
+        /* Navigation */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(26, 58, 92, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 15px 0;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.2);
+        }
+        
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 300;
+            color: #FFFF00;
+            font-family: 'Brush Script MT';
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            color: #FFFF00;
+        }
+        
+        /* Section Styles */
+        .section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 60px;
+            color: #1a3a5c;
+        }
+        
+        /* Speaking Niches */
+        .niches-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .niche-card {
+            background: linear-gradient(135deg, #1a3a5c 0%, #2c4a6b 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 20px;
+            text-align: center;
+            transition: transform 0.3s ease;
+            box-shadow: 0 10px 30px rgba(26, 58, 92, 0.2);
+            border: 2px solid transparent;
+        }
+        
+        .niche-card:hover {
+            transform: translateY(-10px);
+            border-color: #FFFF00;
+            box-shadow: 0 15px 40px rgba(255, 255, 0, 0.2);
+        }
+        
+        .niche-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: #FFFF00;
+        }
+        
+        .niche-card h3 {
+            color: #FFFF00;
+            margin-bottom: 15px;
+        }
+        
+        /* Past Events */
+        .events-wrapper {
+            position: relative;
+            margin-top: 40px;
+        }
+        
+        .events-container {
+            display: flex;
+            gap: 30px;
+            overflow-x: auto;
+            padding: 20px 0;
+            scroll-behavior: smooth;
+            scrollbar-width: thin;
+            scrollbar-color: #f4a623 #e2e8f0;
+        }
+        
+        .events-container::-webkit-scrollbar {
+            height: 8px;
+        }
+        
+        .events-container::-webkit-scrollbar-track {
+            background: #e2e8f0;
+            border-radius: 4px;
+        }
+        
+        .events-container::-webkit-scrollbar-thumb {
+            background: #FFFF00;
+            border-radius: 4px;
+        }
+        
+        .events-container::-webkit-scrollbar-thumb:hover {
+            background: #DDDD00;
+        }
+        
+        .event-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(26, 58, 92, 0.15);
+            transition: transform 0.3s ease;
+            border: 2px solid transparent;
+            min-width: 320px;
+            flex-shrink: 0;
+        }
+        
+        .event-card:hover {
+            transform: translateY(-5px);
+            border-color: #FFFF00;
+        }
+        
+        .event-image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(45deg, #1a3a5c, #2c4a6b);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #FFFF00;
+            font-size: 1.2rem;
+            font-weight: 600;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .event-image-placeholder {
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .scroll-buttons {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 0, 0.9);
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #1a3a5c;
+            font-size: 18px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 10;
+        }
+        
+        .scroll-buttons:hover {
+            background: #FFFF00;
+            transform: translateY(-50%) scale(1.1);
+        }
+        
+        .scroll-left {
+            left: -20px;
+        }
+        
+        .scroll-right {
+            right: -20px;
+        }
+        
+        .event-content {
+            padding: 20px;
+        }
+        
+        .event-content h4 {
+            color: #1a3a5c;
+            margin-bottom: 10px;
+        }
+        
+        .event-content p {
+            color: #1a3a5c;
+        }
+        
+        .event-content p strong {
+            color: #FFFF00;
+            background: #1a3a5c;
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+        
+        /* Books Section */
+        .books-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .book-card {
+            text-align: center;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(26, 58, 92, 0.15);
+            transition: transform 0.3s ease;
+            border: 2px solid transparent;
+        }
+        
+        .book-card:hover {
+            transform: translateY(-5px);
+            border-color: #FFFF00;
+        }
+        
+        .book-card h4 {
+            color: #1a3a5c;
+            margin-bottom: 10px;
+        }
+        
+        .book-card p {
+            color: #1a3a5c;
+        }
+        
+        .book-card a {
+            display: inline-block;
+            margin-top: 15px;
+            background: linear-gradient(135deg, #FFFF00 0%, #FFFF44 100%);
+            color: #1a3a5c;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 2px solid #FFFF00;
+        }
+        
+        .book-card a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 255, 0, 0.3);
+        }
+        
+        .book-cover {
+            width: 150px;
+            height: 200px;
+            background: linear-gradient(135deg, #1a3a5c 0%, #2c4a6b 100%);
+            margin: 0 auto 20px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #FFFF00;
+            font-weight: bold;
+            border: 2px solid #FFFF00;
+        }
+        
+        /* Blog Posts */
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .blog-post {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(26, 58, 92, 0.15);
+            transition: transform 0.3s ease;
+            border-left: 4px solid #FFFF00;
+        }
+        
+        .blog-post:hover {
+            transform: translateY(-5px);
+        }
+        
+        .blog-post h4 {
+            color: #1a3a5c;
+            margin-bottom: 10px;
+        }
+        
+        .blog-post p {
+            color: #1a3a5c;
+        }
+        
+        .blog-date {
+            color: #2c4a6b;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        
+        /* Social Media */
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 40px 0;
+        }
+        
+        .social-link {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #1a3a5c 0%, #2c4a6b 100%);
+            color: #FFFF00;
+            text-align: center;
+            line-height: 50px;
+            border-radius: 50%;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 1.2rem;
+            border: 2px solid #FFFF00;
+        }
+        
+        .social-link:hover {
+            transform: scale(1.1);
+            background: linear-gradient(135deg, #FFFF00 0%, #FFFF44 100%);
+            color: #1a3a5c;
+        }
+        
+        /* Contact Section */
+        .contact-section {
+            background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+            color: #1a3a5c;
+        }
+        
+        .contact-section .section-title {
+            color: #1a3a5c;
+        }
+        
+        .contact-options {
+            max-width: 800px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .contact-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(26, 58, 92, 0.15);
+            border: 2px solid #FFFF00;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .contact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(26, 58, 92, 0.2);
+        }
+        
+        .contact-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #1a3a5c 0%, #2c4a6b 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            color: #FFFF00;
+            font-size: 1.5rem;
+            border: 2px solid #FFFF00;
+        }
+        
+        .contact-card h3 {
+            color: #1a3a5c;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+        
+        .contact-card p {
+            color: #1a3a5c;
+            margin-bottom: 20px;
+            opacity: 0.8;
+        }
+        
+        .contact-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #FFFF00 0%, #FFFF44 100%);
+            color: #1a3a5c;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 2px solid #FFFF00;
+        }
+        
+        .contact-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(255, 255, 0, 0.3);
+            background: linear-gradient(135deg, #FFFF44 0%, #FFFF00 100%);
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .contact-options {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        /* Additional styling for better navy/gold integration */
+        .section:nth-child(even) {
+            background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+        }
+        
+        .section-title {
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, #FFFF00, #FFFF44);
+            margin: 20px auto 0;
+            border-radius: 2px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">Grace Akinsola</div>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#niches">Speaking Topics</a></li>
+                    <li><a href="#events">Events</a></li>
+                    <li><a href="#books">Books</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Grace Akinsola</h1>
+                    <div class="subtitle">Career Transformation Speaker & Community Impact Leader</div>
+                    <p>Empowering individuals and communities through teaching, mentoring personal development programs, and leadership excellence. Inspiring transformation through authentic storytelling and practical wisdom.</p>
+                    <a href="#contact" class="cta-button">Book Speaking Engagement</a>
+                </div>
+                <div class="hero-image">
+                    <img src="C:\Users\oluwa\Downloads\Grace1.jpeg" alt="GraceAkinsola" class="speaker-photo">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Speaking Niches -->
+    <section id="niches" class="section">
+        <div class="container">
+            <h2 class="section-title">Speaking Expertise</h2>
+            <div class="niches-grid">
+                <div class="niche-card">
+                    <div class="niche-icon">🏆</div>
+                    <h3>Career Development Pathways</h3>
+                    <p>Empowering young people through training, coaching and mentorship programs, building character, and developing life skills</p>
+                </div>
+                <div class="niche-card">
+                    <div class="niche-icon">🌟</div>
+                    <h3>Personal Excellence & Growth</h3>
+                    <p>Unlock your potential and achieve extraordinary results through focused action</p>
+                </div>
+                <div class="niche-card">
+                    <div class="niche-icon">🤝</div>
+                    <h3>Software development processes and lifecycle</h3>
+                    <p>Insights on what works and what does not for bespoke and product development, based off 11 years experience in the software development industry</p>
+                </div>
+                <div class="niche-card">
+                    <div class="niche-icon">🤝</div>
+                    <h3>Training and career development talks for teens and youths</h3>
+                    <p>Talks and insights for guiding teenagers, youths and women on the right career path</p>
+                </div>
+                <div class="niche-card">
+                    <div class="niche-icon">🏆</div>
+                    <h3>Resilience & Overcoming Challenges</h3>
+                    <p>Transform setbacks into comebacks with practical strategies for success</p>
+                </div>
+                <div class="niche-card">
+                    <div class="niche-icon">💪</div>
+                    <h3>Bible-base Expository Teachings</h3>
+                    <p>Exposition on the word of God and applying godly principles to all areas of life with a balanced perspective</p>
+                </div>
+                
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Past Events -->
+    <section id="events" class="section">
+        <div class="container">
+            <h2 class="section-title">Recent Speaking Engagements</h2>
+            <div class="events-wrapper">
+                <button class="scroll-buttons scroll-left" onclick="scrollEvents('left')">‹</button>
+                <button class="scroll-buttons scroll-right" onclick="scrollEvents('right')">›</button>
+                <div class="events-container" id="eventsContainer">
+                    <div class="event-card">
+                        <div class="event-image">
+                            <img src="C:\Users\oluwa\Downloads\images\poise.jpg" alt="poise">
+                        </div>
+                        <div class="event-content">
+                            <h4>Purposeful and Outstanding International Students Emporium</h4>
+                            <p><strong>Lagos, Nigeria</strong> | August 2025</p>
+                            <p>Guest Speaker: "Breaking Generation Barriers and Limiting Mindsets"</p>
+                        </div>
+                    </div>
+                    <div class="event-card">
+                        <div class="event-image">
+                            <img src="C:\Users\oluwa\Downloads\images\EoE.png" alt="Echoes of Excellence">
+                        </div>
+                        <div class="event-content">
+                            <h4>Greatness Heights Graduation Party</h4>
+                            <p><strong>Lagos, Nigeria</strong> | July 2025</p>
+                            <p>Guest Speaker: "Echoes of Excellence"</p>
+                        </div>
+                    </div>
+                    <div class="event-card">
+                        <div class="event-image">
+                            <img src="C:\Users\oluwa\Downloads\images\Techxity.jpg" alt="Techxity Hub">
+                        </div>
+                        <div class="event-content">
+                            <h4>Digital Skills and Tech Development</h4>
+                            <p><strong>Ikorodu, Lagos</strong> | August 2025</p>
+                            <p>Summer Bootcamp: "3D Design, Artificial Intelligence, Web and Product Design for Teens"</p>
+                        </div>
+                    </div>
+                    <div class="event-card">
+                        <div class="event-image">
+                            <img src="C:\Users\oluwa\Downloads\images\Agile PPM.png" alt="Product and Program Management">
+                        </div>
+                        <div class="event-content">
+                            <h4>TechUplift Skills Bootcamp</h4>
+                            <p><strong>Virtual</strong> | Since May 2021</p>
+                            <p>Bootcamp Host: "TechUplift" - 150 graduates empowered</p>
+                        </div>
+                    </div>
+                    <div class="event-card">
+                        <div class="event-image">
+                            <img src="C:\Users\oluwa\Downloads\images\E-AI.jpg" alt="Experience AI by Google">
+                        </div>
+                        <div class="event-content">
+                            <h4>Introduction to AI and Machine Learning</h4>
+                            <p><strong>Lagos, Nigeria</strong> | November 2024</p>
+                            <p>Keynote: "Experience AI Program"</p>
+                        </div>
+                    </div>
+                    <div class="event-card">
+                        <div class="event-image">
+                            <img src="C:\Users\oluwa\Downloads\images\devlantern.png" alt="Agile Mindset with Devlantern">
+                        </div>
+                        <div class="event-content">
+                            <a href="https://www.youtube.com/watch?v=fHgQkz8obkA" target="_blank"><h4>Developing an Agile mindset with DevLantern</h4></a>
+                            <p><strong>Lagos, Nigeria</strong> | May 2025</p>
+                            <p>Panel: "Developing an Agile Mindset"</p>
+                        </div>
+                    </div>
+                    <div class="event-card">
+                        <div class="event-image">
+                            <img src="C:\Users\oluwa\Downloads\images\ITSM-CONNECT-2023-MODERATOR.png" alt="ITSM Connect 2023 Event">
+                        </div>
+                        <div class="event-content">
+                            <h4>Data, AI and Automations in IT service management</h4>
+                            <p><strong>Lagos, Nigeria</strong> | October 2023</p>
+                            <p>Panel Moderator: "Data, AI and Automations in IT service management"</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Books -->
+    <section id="books" class="section">
+        <div class="container">
+            <h2 class="section-title">Published Works</h2>
+            <div class="books-grid">
+                <div class="book-card">
+                    <div class="book-cover">
+                        <div>35<br>LIFE<br>LESSONS<br>AT 35</div>
+                    </div>
+                    <h4>An autobiography and true life story with deep reflections for young people</h4>
+                    <p>2025 | Grace Akinsola</p>
+                    <a href="https://selar.com/BackToEden" target="_blank">BUY NOW</a>
+                </div>
+                <div class="book-card">
+                    <div class="book-cover">
+                        <img src="C:\Users\oluwa\Downloads\images\front.jpg" alt="Back to Eden">
+                    </div>
+                    <h4>A journey to where it all started and where we need to be now</h4>
+                    <p>2024 | Grace Akinsola</p>
+                    <a href="https://selar.com/BackToEden" target="_blank">BUY NOW</a>
+                </div>
+                <div class="book-card">
+                    <div class="book-cover">
+                        <img src="C:\Users\oluwa\Downloads\images\Faith Image(Joshua Grace).jpg" alt="Exploits through Faith">
+                    </div>
+                    <h4>How to enter into unique manifestations of power, grace and glory through faith in God</h4>
+                    <p>2018 | Grace Akinsola</p>
+                    <a href="https://selar.com/ExploitsThroughFaith" target="_blank">BUY NOW</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Posts -->
+    <section id="blog" class="section">
+        <div class="container">
+            <h2 class="section-title">Latest Insights</h2>
+            <div class="blog-grid">
+                <article class="blog-post">
+                    <div class="blog-date">August 15, 2025</div>
+                    <h4>The Future of Remote Leadership</h4>
+                    <p>Exploring how leaders can effectively manage distributed teams and maintain company culture in the post-pandemic world.</p>
+                </article>
+                <article class="blog-post">
+                    <div class="blog-date">August 8, 2025</div>
+                    <h4>AI and Human Creativity: A Partnership</h4>
+                    <p>How artificial intelligence can enhance rather than replace human creativity in the workplace, fostering innovation.</p>
+                </article>
+                <article class="blog-post">
+                    <div class="blog-date">July 28, 2025</div>
+                    <h4>Sustainable Business Models for 2025</h4>
+                    <p>Five key strategies for building environmentally and socially responsible businesses that drive long-term value.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Media -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Connect With Me</h2>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/akinsola-grace" class="social-link" title="LinkedIn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                    </svg>
+                </a>
+                <a href="https://x.com/geerace001" class="social-link" title="X (Twitter)">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                    </svg>
+                </a>
+                <a href="https://web.facebook.com/geerace001" class="social-link" title="Facebook">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                    </svg>
+                </a>
+                <a href="#" class="social-link" title="Instagram">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section">
+        <div class="container">
+            <h2 class="section-title">Let's Work Together</h2>
+            <p style="text-align: center; margin-bottom: 40px; font-size: 1.1rem; color: #1a3a5c;">Ready to inspire your audience? Choose the best way to connect with me below.</p>
+            
+            <div class="contact-options">
+                
+                <div class="contact-card">
+                    <div class="contact-icon">✉️</div>
+                    <h3>Send Email</h3>
+                    <p>Have a specific inquiry or speaking opportunity? Send me a direct email.</p>
+                    <a href="mailto:oluwabusayograce@gmail.com" class="contact-btn">Send Email</a>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon">📅</div>
+                    <h3>Book a Meeting</h3>
+                    <p>Schedule a consultation to discuss your event needs and speaking requirements.</p>
+                    <a href="https://calendly.com/graceakinsola" class="contact-btn" target="_blank">Book Meeting</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Events carousel scrolling functionality
+        function scrollEvents(direction) {
+            const container = document.getElementById('eventsContainer');
+            const scrollAmount = 350; // Adjust based on card width + gap
+            
+            if (direction === 'left') {
+                container.scrollLeft -= scrollAmount;
+            } else {
+                container.scrollLeft += scrollAmount;
+            }
+        }
+
+        // Auto-hide scroll buttons based on scroll position
+        function updateScrollButtons() {
+            const container = document.getElementById('eventsContainer');
+            const leftBtn = document.querySelector('.scroll-left');
+            const rightBtn = document.querySelector('.scroll-right');
+            
+            // Hide left button at the beginning
+            if (container.scrollLeft <= 0) {
+                leftBtn.style.opacity = '0.5';
+                leftBtn.style.pointerEvents = 'none';
+            } else {
+                leftBtn.style.opacity = '1';
+                leftBtn.style.pointerEvents = 'auto';
+            }
+            
+            // Hide right button at the end
+            if (container.scrollLeft >= container.scrollWidth - container.clientWidth) {
+                rightBtn.style.opacity = '0.5';
+                rightBtn.style.pointerEvents = 'none';
+            } else {
+                rightBtn.style.opacity = '1';
+                rightBtn.style.pointerEvents = 'auto';
+            }
+        }
+
+        // Initialize scroll button states and add scroll listener
+        document.addEventListener('DOMContentLoaded', function() {
+            const container = document.getElementById('eventsContainer');
+            updateScrollButtons();
+            container.addEventListener('scroll', updateScrollButtons);
+        });
+
+        // Add scroll effect to navigation
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('.nav');
+            if (window.scrollY > 100) {
+                nav.style.background = 'rgba(26, 58, 92, 0.98)';
+            } else {
+                nav.style.background = 'rgba(26, 58, 92, 0.95)';
+            }
+        });
+
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all cards and sections
+        document.querySelectorAll('.niche-card, .event-card, .book-card, .blog-post, .contact-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'all 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
