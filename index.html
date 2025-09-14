@@ -584,9 +584,321 @@
             margin: 20px auto 0;
             border-radius: 2px;
         }
+                /* Mobile Menu */
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: #FFFF00;
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 10px;
+        }
+        
+        .mobile-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: rgba(26, 58, 92, 0.98);
+            backdrop-filter: blur(10px);
+            padding: 20px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+        }
+        
+        .mobile-menu.active {
+            display: block;
+        }
+        
+        .mobile-menu ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .mobile-menu ul li {
+            margin-bottom: 15px;
+        }
+        
+        .mobile-menu ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 500;
+            display: block;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+        
+        .mobile-menu ul li a:hover {
+            background: rgba(255, 255, 0, 0.1);
+            color: #FFFF00;
+        }
+        /* Responsive Design */
+@media (max-width: 1024px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    .hero-text h1 {
+        font-size: 3rem;
+    }
+    
+    .speaker-photo {
+        width: 350px;
+        height: 525px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        min-height: 90vh;
+        padding: 80px 0 40px;
+    }
+    
+    .hero-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 30px;
+    }
+    
+    .hero-text h1 {
+        font-size: 2.5rem;
+        margin-bottom: 15px;
+    }
+    
+    .hero-text .subtitle {
+        font-size: 1.1rem;
+        margin-bottom: 20px;
+    }
+    
+    .hero-text p {
+        font-size: 1rem;
+        margin-bottom: 25px;
+    }
+    
+    .speaker-photo {
+        width: 280px;
+        height: 420px;
+        font-size: 1.2rem;
+    }
+    
+    .nav-links {
+        display: none;
+    }
+    
+    .mobile-menu-toggle {
+        display: block;
+    }
+    
+    .section {
+        padding: 60px 0;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: 40px;
+    }
+    
+    .niches-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .niche-card {
+        padding: 25px;
+    }
+    
+    .niche-icon {
+        font-size: 2.5rem;
+    }
+    
+    .events-container {
+        gap: 20px;
+    }
+    
+    .event-card {
+        min-width: 280px;
+    }
+    
+    .scroll-buttons {
+        width: 35px;
+        height: 35px;
+        font-size: 16px;
+    }
+    
+    .scroll-left {
+        left: -15px;
+    }
+    
+    .scroll-right {
+        right: -15px;
+    }
+    
+    .books-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    
+    .book-cover {
+        width: 120px;
+        height: 160px;
+    }
+    
+    .blog-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .contact-options {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .contact-card {
+        padding: 30px 25px;
+    }
+    
+    .social-links {
+        gap: 15px;
+    }
+    
+    .social-link {
+        width: 45px;
+        height: 45px;
+        line-height: 45px;
+    }
+    }
+    
+    @media (max-width: 480px) {
+        .container {
+            padding: 0 10px;
+        }
+        
+        .hero {
+            padding: 70px 0 30px;
+        }
+        
+        .hero-text h1 {
+            font-size: 2rem;
+        }
+        
+        .hero-text .subtitle {
+            font-size: 1rem;
+        }
+        
+        .speaker-photo {
+            width: 240px;
+            height: 360px;
+            font-size: 1rem;
+        }
+        
+        .cta-button {
+            padding: 12px 25px;
+            font-size: 0.9rem;
+        }
+        
+        .section {
+            padding: 50px 0;
+        }
+        
+        .section-title {
+            font-size: 1.8rem;
+        }
+        
+        .niche-card {
+            padding: 20px;
+        }
+        
+        .niche-icon {
+            font-size: 2rem;
+        }
+        
+        .event-card {
+            min-width: 260px;
+        }
+        
+        .event-content {
+            padding: 15px;
+        }
+        
+        .book-card {
+            padding: 25px 20px;
+        }
+        
+        .book-cover {
+            width: 100px;
+            height: 140px;
+            font-size: 0.8rem;
+        }
+        
+        .blog-post {
+            padding: 20px;
+        }
+        
+        .contact-card {
+            padding: 25px 20px;
+        }
+        
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            font-size: 1.2rem;
+        }
+        
+        .contact-btn {
+            padding: 10px 20px;
+            font-size: 0.9rem;
+        }
+        
+        .social-link {
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+        }
+        
+        .nav {
+            padding: 10px 0;
+        }
+        
+        .logo {
+            font-size: 1.3rem;
+        }
+    }
+    
+    /* Landscape phone adjustments */
+    @media (max-width: 768px) and (orientation: landscape) {
+        .hero {
+            min-height: 100vh;
+        }
+        
+        .hero-content {
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            text-align: left;
+        }
+        
+        .speaker-photo {
+            width: 200px;
+            height: 300px;
+        }
+    }
     </style>
 </head>
 <body>
+    <!-- Mobile Menu -->
+    <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">☰</button>
+    <div class="mobile-menu" id="mobileMenu">
+        <ul>
+            <li><a href="#home" onclick="closeMobileMenu()">Home</a></li>
+            <li><a href="#niches" onclick="closeMobileMenu()">Speaking Topics</a></li>
+            <li><a href="#events" onclick="closeMobileMenu()">Events</a></li>
+            <li><a href="#books" onclick="closeMobileMenu()">Books</a></li>
+            <li><a href="#blog" onclick="closeMobileMenu()">Blog</a></li>
+            <li><a href="#contact" onclick="closeMobileMenu()">Contact</a></li>
+        </ul>
+    </div>
     <!-- Navigation -->
     <nav class="nav">
         <div class="container">
@@ -921,6 +1233,33 @@
             el.style.transform = 'translateY(30px)';
             el.style.transition = 'all 0.6s ease';
             observer.observe(el);
+        });
+        // Mobile menu functionality
+        function toggleMobileMenu() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            const menuToggle = document.querySelector('.mobile-menu-toggle');
+            
+            mobileMenu.classList.toggle('active');
+            menuToggle.innerHTML = mobileMenu.classList.contains('active') ? '✕' : '☰';
+        }
+        
+        function closeMobileMenu() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            const menuToggle = document.querySelector('.mobile-menu-toggle');
+            
+            mobileMenu.classList.remove('active');
+            menuToggle.innerHTML = '☰';
+        }
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const mobileMenu = document.getElementById('mobileMenu');
+            const menuToggle = document.querySelector('.mobile-menu-toggle');
+            const nav = document.querySelector('.nav');
+            
+            if (!nav.contains(event.target) && mobileMenu.classList.contains('active')) {
+                closeMobileMenu();
+            }
         });
     </script>
 </body>
